@@ -8,5 +8,8 @@ export const PlayerFactory = function () {
 };
 
 export const ComputerFactory = function () {
-  return Object.assign(PlayerFactory(), {});
+  function sendAttack(gameboard, hitCoordinate) {
+    gameboard.receiveAttack(hitCoordinate);
+  }
+  return { sendAttack };
 };
