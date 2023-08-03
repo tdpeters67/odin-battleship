@@ -33,3 +33,12 @@ test("can't shoot same shot twice", () => {
     "You can't shoot the same shot twice"
   );
 });
+test("reporting if all ships sunk if they're not", () => {
+  expect(testGameboardFactory.reportAllShipsSunk()).toBeFalsy();
+});
+test("reporting if all ships are sunk when theyre all sunk", () => {
+  testGameboardFactory.receiveAttack("A1");
+  testGameboardFactory.receiveAttack("B1");
+  testGameboardFactory.receiveAttack("C1");
+  expect(testGameboardFactory.reportAllShipsSunk()).toBeTruthy();
+});

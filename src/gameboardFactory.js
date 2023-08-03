@@ -13,7 +13,6 @@ export const GameboardFactory = function () {
     if (previouslyShotShots.indexOf(hitCoordinate) !== -1) {
       return "You can't shoot the same shot twice";
     }
-
     previouslyShotShots.push(hitCoordinate);
 
     shipArrayBoard.map((ship) => {
@@ -26,6 +25,10 @@ export const GameboardFactory = function () {
       }
     });
   }
+  function reportAllShipsSunk() {
+    const allSunkShipsArray = shipArrayBoard.map((ship) => ship.isSunk());
+    return allSunkShipsArray.every((sunkShip) => sunkShip === true);
+  }
 
   return {
     shipArrayBoard,
@@ -33,5 +36,6 @@ export const GameboardFactory = function () {
     previouslyShotShots,
     placeShip,
     receiveAttack,
+    reportAllShipsSunk,
   };
 };
