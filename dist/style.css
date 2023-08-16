@@ -1,6 +1,17 @@
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.playerContainer {
+  width: fit-content;
+}
+
 #container {
-  width: 225px;
-  height: 225px;
+  display: grid;
+  grid-template-columns: repeat(10, 20px);
+  border: 5px solid green;
+  width: max-content;
 }
 
 .cell {
@@ -8,5 +19,85 @@
   height: 20px;
   display: block;
   float: left;
-  border: 1px solid red;
+  border: 1px solid white;
+  background-color: rgb(84, 84, 252);
+}
+
+.port {
+  width: 206px;
+  height: 200px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.carrier {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 20px;
+  background-color: grey;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.battleship {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 20px;
+  background-color: grey;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.destroyer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 20px;
+  background-color: grey;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.submarine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 20px;
+  background-color: grey;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.patrol {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 20px;
+  background-color: grey;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.shipText {
+  font-size: small;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
 }

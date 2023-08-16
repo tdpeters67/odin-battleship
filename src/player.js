@@ -13,3 +13,5 @@ export const ComputerFactory = function () {
   }
   return { sendAttack };
 };
+
+//make sure computerfactory knows not to go to the same spot twice
